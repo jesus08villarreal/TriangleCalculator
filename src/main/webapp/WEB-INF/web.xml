@@ -3,12 +3,33 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
    version="6.0">
+   
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>SaveUserNameServlet</servlet-name>
+        <servlet-class>com.mycompany.trianglecalculator.servlets.SaveUserNameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveUserNameServlet</servlet-name>
+        <url-pattern>/SaveUserNameServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CalculateTriangleServlet</servlet-name>
+        <servlet-class>com.mycompany.trianglecalculator.servlets.CalculateTriangleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculateTriangleServlet</servlet-name>
+        <url-pattern>/CalculateTriangleServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
